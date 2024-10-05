@@ -1,0 +1,44 @@
+@model Proyecto_Parcial.Models.Remesa
+<div class="container">
+    <form asp-controller="Registro" asp-action="Create" method="post">
+        <div class="form-group">
+            <label asp-for="Remitente" class="control-label">Remitente</label>
+            <input asp-for="Remitente" class="form-control" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label asp-for="Destinatario" class="control-label">Destinatario</label>
+            <input asp-for="Destinatario" class="form-control" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label asp-for="PaisOrigen" class="control-label">Pais de Origen</label>
+            <input asp-for="PaisOrigen" class="form-control" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label asp-for="PaisDestino" class="control-label">Pais de destino</label>
+            <input asp-for="PaisDestino" class="form-control" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label asp-for="MontoEnviado" class="control-label">Monto de Envio</label>
+            <input asp-for="MontoEnviado" type="number" class="form-control" required>
+        </div>
+        <br>
+        <div class="form-group">
+            <label asp-for="TipoMoneda">Tipo de cuenta</label>
+            <select required asp-for="TipoMoneda" class="form-control">
+                <option asp-for="TipoMoneda" value="Cuenta de ahorro">Bitcoin (BTC)</option>
+                <option asp-for="TipoMoneda" value="Cuenta a plazo fijo">Dolares (USD)</option>
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <label asp-for="TasaCambio" class="control-label">Tasa de Cambio</label>
+            <input asp-for="TasaCambio" type="number" step="0.01" class="form-control" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary mb-3">Registrar</button>
+    </form>
+</div>
